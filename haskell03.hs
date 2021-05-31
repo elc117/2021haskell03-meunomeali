@@ -35,6 +35,7 @@ selectgt5 lint = [x | x <- lint, x > 5]
 
 
 -- 8) soma todos os números impares de uma lista
+-- soma entre 2 valores, será utilizidao mais vezes ao decorrer do código
 soma :: Int -> Int -> Int
 soma x y = x+y
 
@@ -71,4 +72,6 @@ selectSnd :: [(Int,Int)] -> [Int]
 selectSnd lTuplas = [y | (_,y) <- lTuplas]
 
 
--- 15)
+-- 15) transforma 2 listas em uma lista de tuplas, multiplica os valores dentro de cada tupla entre si e soma todos os resultados
+dotProd :: [Int] -> [Int] -> Int
+dotProd lint1 lint2 = foldl1 soma [x*y | (x,y) <- (zip lint1 lint2)]
