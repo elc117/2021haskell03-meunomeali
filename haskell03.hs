@@ -43,4 +43,22 @@ sumOdds lint = foldl1 soma ([x | x <- lint, odd x])
 
 -- 9) memso que anterior sem list comprehension
 sumOdds' :: [Int] -> Int
-sumOdds' lint
+sumOdds' lint = foldl1 soma (filter (\int -> odd int) lint)
+
+
+-- 10) selecione somente os valores pares entre 20 e 50, inclusive
+selectExpr :: [Int] -> [Int]
+selectExpr lint = [x | x <- lint, even x, x>= 20, x<= 50]
+
+
+-- 11) retorna o numero de palavras que possuem menos de 5 caracteres da lista
+countShorts :: [String] -> Int
+countShorts lstr = length [x | x <- lstr, length x < 5]
+
+
+-- 12) calcula x^2/2 e mantem apenas respostas > 10
+calcExpr :: [Float] -> [Float]
+calcExpr lfloat = filter (\float -> float > 10) [x^2/2 | x <- lfloat]
+
+
+--13) 
