@@ -61,4 +61,14 @@ calcExpr :: [Float] -> [Float]
 calcExpr lfloat = filter (\float -> float > 10) [x^2/2 | x <- lfloat]
 
 
---13) 
+-- 13) troca ' ' por '-' em uma string
+trSpaces :: String -> String
+trSpaces str = concat [if x == ' ' then ['-'] else [x] | x <- str]
+
+
+-- 14) mantem apenas o segundo elemento de uma lista de tuplas
+selectSnd :: [(Int,Int)] -> [Int]
+selectSnd lTuplas = [y | (_,y) <- lTuplas]
+
+
+-- 15)
