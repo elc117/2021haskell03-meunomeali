@@ -42,4 +42,5 @@ sumOdds :: [Int] -> Int
 sumOdds lint = foldl1 soma ([x | x <- lint, odd x])
 
 -- 9) memso que anterior sem list comprehension
-
+sumOdds' :: [Int] -> Int
+sumOdds' lint
